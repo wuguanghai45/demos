@@ -118,7 +118,6 @@ module.exports = {
           {
             options: {
               formatter: eslintFormatter,
-              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -138,7 +137,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.css$/,
+          /\.(css|less)$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -167,7 +166,7 @@ module.exports = {
         include: paths.appSrc,
         loader: require.resolve('babel-loader'),
         options: {
-          
+
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
@@ -180,7 +179,7 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.css$/,
+        test: /\.(css|less)$/,
         use: [
           require.resolve('style-loader'),
           {
@@ -208,6 +207,9 @@ module.exports = {
                 }),
               ],
             },
+          },
+          {
+            loader: require.resolve('less-loader'),
           },
         ],
       },

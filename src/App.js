@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MouseChangeStyleWrap from "./MouseChangeStyleWrap";
+import 'antd/dist/antd.less';
+import { Row, Col } from "antd";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Row >
+        <div style={{height: 500}}> </div>
+        <Col span={12} />
+        <Col span={12}>
+          <MouseChangeStyleWrap>
+            这个是3dhover
+          </MouseChangeStyleWrap>
+        </Col>
+        <div style={{height: 500}}> </div>
+      </Row>
     );
   }
 }

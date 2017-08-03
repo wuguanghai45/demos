@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^2.12.2",
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
@@ -24,8 +25,10 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
+    "g2": "^2.3.7",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "jquery": "^3.2.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
@@ -86,5 +89,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5"
   }
 }
